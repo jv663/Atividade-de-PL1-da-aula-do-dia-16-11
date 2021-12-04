@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tarefa 3</title>
+
+  <script language="JavaScript">
+function quantidade()
+  {
+  var frase = document.getElementById("plv").value;;
+
+  var vogais = 0;
+  var consoantes = 0;
+  var digitos = 0;
+  var outros = 0;
+  
+  for(var i=0; i<frase.length; ++i)
+  {
+    if (frase.charAt(i)=="A" || frase.charAt(i)=="E" || frase.charAt(i)=="I" || frase.charAt(i)=="O" || frase.charAt(i)=="U"
+    || frase.charAt(i)=="a" || frase.charAt(i)=="e" || frase.charAt(i)=="i" || frase.charAt(i)=="o" || frase.charAt(i)=="u") 
+        {
+          vogais += 1;
+        }
+    else
+       if (frase.charCodeAt(i)>64 && frase.charCodeAt(i)<91 || frase.charCodeAt(i)>96 && frase.charCodeAt(i)<123)
+           {
+             consoantes += 1;
+           }
+        else
+           if (frase.charCodeAt(i)>=48 && frase.charCodeAt(i)<=57)
+              {
+                digitos += 1;
+              }  
+           else
+              {
+                outros += 1;
+              }
+  
+  }
+
+  document.write("<table border='1' align = 'center'>");
+  document.write("<tr><td colspan='2'>quantidades:</td></tr>");
+  document.write("<tr><td>Existem vogais:</td><td>" + vogais + "</td></tr>");
+  document.write("<tr><td>Existem consoantes:</td><td>" + consoantes + "</td></tr>");
+  document.write("<tr><td>Existem digitos:</td><td>" + digitos + "</td></tr>");
+  document.write("<tr><td>Existem outros caracteres:</td><td>" + outros + "</td></tr>");
+  document.write("</table>");
+  }
+  </script>
+
+</head>
+
+<body>
+
+<form name="frmEntrada">
+<table>
+  
+<tr>
+<td align="center">Digite uma palavra ou frase de sua escolha: <input type="text" id="plv"></td>
+</tr>
+<tr>
+<td><input type="button" value="enviar" onClick="quantidade()"></td>
+</tr>
+</table>
+
+</form>
+
+</body>
+
+</html>

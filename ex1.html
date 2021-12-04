@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tarefa 1</title>
+
+  <script language="JavaScript">
+
+  function vertical()
+  {
+  var nome, i;
+  nome = document.frmEntrada.plv.value;
+
+  document.write("<table border='2'>");
+  for(i=0; i<nome.length; ++i)
+  {
+    document.write("<tr><td>");
+    document.write(nome.charAt(i));
+    document.write("</td></tr>");
+  }
+  document.write("</table>");
+  }
+
+  function horizontal()
+  {
+  var nome = document.getElementById("plv").value;
+
+  document.write("<table border='2'>");
+    document.write("<tr>");
+  for(var i=0; i<nome.length; ++i)
+  {
+    document.write("<td>");
+    document.write(nome.charAt(i));
+    document.write("</td>");
+  }
+  document.write("</tr></table>");
+  }
+  
+
+  </script>
+
+</head>
+
+<body>
+<table align="center">
+
+<tr>
+<form name="frmEntrada">
+<td colspan="2">Digite a palavra que quiser aqui:<input type="text" id="plv"></td>
+</tr>
+
+<td align="center"><input type="button" value="horizontal" onClick="horizontal()"></td>
+<td align="center"><input type="button" value="vertical" onClick="vertical()"></td>
+
+</form>
+</table>
+</body>
+
+</html>

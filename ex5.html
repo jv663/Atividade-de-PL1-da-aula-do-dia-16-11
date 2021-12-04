@@ -1,0 +1,36 @@
+<html>
+
+<head>
+  <title>atvPL1</title>
+
+  <script language="JavaScript">
+function nome1()
+{
+  var nome = document.getElementById("nome").value;
+
+
+  var sobrenome = nome.lastIndexOf(" ");
+  var novoNome = nome.substr(sobrenome+1, nome.length - sobrenome) + ", " + nome.substr(0, sobrenome);
+  
+  document.write("<table border='1'>");
+  document.write("<tr><td>" + novoNome + "</td></tr>");
+  document.write("</table>");
+  }
+  </script>
+
+</head>
+
+<body>
+<table align="center">
+<form name="frmEntrada">
+  <tr>
+    <td>Insira um nome: <input type="text" name="txtnome" id="nome"></td>
+  </tr>
+  <tr>
+    <td align="center"><input type="button" value="enviar" onClick="nome1()"></td>
+  </tr>
+</form>
+
+</body>
+
+</html>

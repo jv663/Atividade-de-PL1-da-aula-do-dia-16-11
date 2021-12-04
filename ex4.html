@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tarefa 4</title>
+
+  <script language="JavaScript">
+function palindromo()
+  {
+  var palavra = document.getElementById("plv").value;;
+
+  var tiraSpaco = "";
+  for(var i=0; i<palavra.length; ++i)
+  {
+    if (palavra.charAt(i)!=" ")
+    {
+      tiraSpaco += palavra.charAt(i);
+    }
+  }
+
+  var invertida = "";
+  for(i= tiraSpaco.length-1; i>=0; --i)
+  {
+    invertida += tiraSpaco.charAt(i);
+  }
+
+  document.write("<table border='1' align='center'>");
+  document.write("<tr><td colspan='2'> É palindromo? </td></tr>");  
+  document.write("<tr><td> Normal </td>")
+  document.write("<td>" + tiraSpaco + "</td></tr>");
+  document.write("<tr><td> Invertido </td>");
+  document.write("<td>" + invertida + "</td></tr>");
+  if (tiraSpaco == invertida){
+    document.write("<tr><td colspan='2'> É um Palindromo </td></tr>");    
+  }
+  else{
+    document.write("<tr><td colspan='2'> Não é um palindromo </td></tr>");
+  }
+  
+  document.write("</table>");
+  }
+  </script>
+
+</head>
+
+<body>
+<table align="center">
+<form name="frmEntrada">
+<tr><td>Digite uma palavra / frase para ver se é palindromo ou não: <input type="text" id="plv"></td></tr>
+
+<tr><td align="center"><input type="button" value="enviar" onClick="palindromo()"></td></tr>
+
+</form>
+</table>
+
+</body>
+
+</html>

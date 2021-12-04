@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tarefa 2</title>
+
+  <script language="JavaScript">
+
+  function CxN()
+  {
+  var caracter = document.getElementById("Crt").value;
+  var qtd = parseInt(document.getElementById("num").value);
+
+  var letra = "";
+  for(var i=0; i<qtd; ++i)
+  {
+    letra += caracter;
+  }
+  
+  document.write("<table border='1' align='center'><tr><td>");
+  document.write(letra);
+  document.write("</td></tr></table>");
+  }
+
+  </script>
+
+</head>
+
+<body>
+<table align="center">
+    
+<form name="frmEntrada">
+    <tr>
+<td align="center">Caractere:<input type="text" id="Crt"></td>
+<td align="center">Quantidade de repetições:<input type="text" id="num"></td>
+    </tr>
+    <tr>
+<td align="center" colspan="2"><input type="button" value="enviar" onClick="CxN()"></td>
+    </tr>
+</form>
+</table>
+
+</body>
+
+</html>
